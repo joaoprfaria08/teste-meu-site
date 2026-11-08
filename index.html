@@ -4,6 +4,26 @@
         <meta charset = "UTF-8">
             <meta name = "author" content = "Faras jprfaria@ua.pt">
         <title>Kimi Antonelli é campeão mundial de F1</title>
+
+        <style>
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #333333;
+            }
+
+            body.dark-mode {
+                --bg-color: #121212;
+                --text-color: #ffffff;
+            }
+
+            body {
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                transition: background-color 0.3s, color 0.3s;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+        </style>
     </head>
     <body>
         <h1 align="center">Kimi Antonelli é campeão mundial de Formula 1</h1>
@@ -19,7 +39,7 @@
         <p align="center">Kimi Antonelli</p>
        
         <br>
-        <hr style="width: 40%; height: 3px; background-color: black; border: none; margin: 20px auto;">
+        <hr style="width: 80%; height: 3px; background-color: black; border: none; margin: 20px auto;">
         <br>
 
         <title>Qualificação GP do Brasil</title>
@@ -38,5 +58,15 @@
         <a href="https://www.formula1.com/en/results/2026/drivers" target="_blank">Classificções da Temporada 26/27</a>
         <br>
         <br>
+        
+        <button id="darkModeToggle">Alternar Modo Escuro</button>
+
+        <script>
+            const toggleButton = document.getElementById('darkModeToggle');
+
+            toggleButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
     </body>
 </html>
